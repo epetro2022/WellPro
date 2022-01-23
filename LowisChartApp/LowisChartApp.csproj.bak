@@ -1,0 +1,666 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{14D69E93-4579-4E10-B9FD-89783F04FC7A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LowisChartApp</RootNamespace>
+    <AssemblyName>LowisChartApp</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v17.2" />
+    <Reference Include="DevExpress.Charts.v17.2.Core, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.CodeParser.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v17.2" />
+    <Reference Include="DevExpress.DataAccess.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v17.2" />
+    <Reference Include="DevExpress.Sparkline.v17.2.Core" />
+    <Reference Include="DevExpress.Xpo.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v17.2.UI, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v17.2.Wizard, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v17.2" />
+    <Reference Include="DevExpress.Printing.v17.2.Core" />
+    <Reference Include="DevExpress.XtraGrid.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BeamWellConditions\BeamWellCondition.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BeamWellConditions\BeamWellCondition.Designer.cs">
+      <DependentUpon>BeamWellCondition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lw2DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lw2DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="lw2DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lw2DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="lw2DataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lw2DataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="lw2DataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lw2DataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="lw2DataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lw2DataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="lw2DataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lw2DataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="lw2DataSet14.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lw2DataSet14.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="lw2DataSet15.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lw2DataSet15.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="lw2DataSet16.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lw2DataSet16.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="lw2DataSet17.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lw2DataSet17.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="lw2DataSet18.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lw2DataSet18.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="lw2DataSet19.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lw2DataSet19.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="lw2DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lw2DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="lw2DataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lw2DataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="lw2DataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lw2DataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="lw2DataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lw2DataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="lw2DataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lw2DataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="lw2DataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lw2DataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="lw2DataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lw2DataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="lw2DataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lw2DataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="lw\AlarmClassConfig.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="lw\AlarmClassConfig.Designer.cs">
+      <DependentUpon>AlarmClassConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lw\AlarmHistory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="lw\AlarmHistory.Designer.cs">
+      <DependentUpon>AlarmHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lw\BeamWellCurrentStatus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="lw\BeamWellCurrentStatus.Designer.cs">
+      <DependentUpon>BeamWellCurrentStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lw\BeamWellCurrentStatusMain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="lw\BeamWellCurrentStatusMain.Designer.cs">
+      <DependentUpon>BeamWellCurrentStatusMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lw\BeamWellGroupConfiguration.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="lw\BeamWellGroupConfiguration.Designer.cs">
+      <DependentUpon>BeamWellGroupConfiguration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lw\detailLW.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="lw\detailLW.Designer.cs">
+      <DependentUpon>detailLW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lw\DiscreteStatus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="lw\DiscreteStatus.Designer.cs">
+      <DependentUpon>DiscreteStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lw\EspGroup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="lw\EspGroup.Designer.cs">
+      <DependentUpon>EspGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lw\ESPWellCurrentStatus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="lw\ESPWellCurrentStatus.Designer.cs">
+      <DependentUpon>ESPWellCurrentStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lw\ESPWellCurrentStatusMain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="lw\ESPWellCurrentStatusMain.Designer.cs">
+      <DependentUpon>ESPWellCurrentStatusMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lw\GroupAnalogConfig.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="lw\GroupAnalogConfig.Designer.cs">
+      <DependentUpon>GroupAnalogConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lw\GroupAnalogStatus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="lw\GroupAnalogStatus.Designer.cs">
+      <DependentUpon>GroupAnalogStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lw\GroupDescreteConfig.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="lw\GroupDescreteConfig.Designer.cs">
+      <DependentUpon>GroupDescreteConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lw\Groupdescretestatus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="lw\Groupdescretestatus.Designer.cs">
+      <DependentUpon>Groupdescretestatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lw\LowisForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="lw\LowisForm.Designer.cs">
+      <DependentUpon>LowisForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lw\Mostrecenttest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="lw\Mostrecenttest.Designer.cs">
+      <DependentUpon>Mostrecenttest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lw\TmpTest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="lw\TmpTest.Designer.cs">
+      <DependentUpon>TmpTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lw\WellCurrentStatus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="lw\WellCurrentStatus.Designer.cs">
+      <DependentUpon>WellCurrentStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lw\WellgroupStatus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="lw\WellgroupStatus.Designer.cs">
+      <DependentUpon>WellgroupStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="model\DB.cs" />
+    <Compile Include="model\Globals.cs" />
+    <Compile Include="model\MyCache.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BeamWellConditions\BeamWellCondition.resx">
+      <DependentUpon>BeamWellCondition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lw\AlarmClassConfig.resx">
+      <DependentUpon>AlarmClassConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lw\AlarmHistory.resx">
+      <DependentUpon>AlarmHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lw\BeamWellCurrentStatus.resx">
+      <DependentUpon>BeamWellCurrentStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lw\BeamWellCurrentStatusMain.resx">
+      <DependentUpon>BeamWellCurrentStatusMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lw\BeamWellGroupConfiguration.resx">
+      <DependentUpon>BeamWellGroupConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lw\detailLW.resx">
+      <DependentUpon>detailLW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lw\DiscreteStatus.resx">
+      <DependentUpon>DiscreteStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lw\EspGroup.resx">
+      <DependentUpon>EspGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lw\ESPWellCurrentStatus.resx">
+      <DependentUpon>ESPWellCurrentStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lw\ESPWellCurrentStatusMain.resx">
+      <DependentUpon>ESPWellCurrentStatusMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lw\GroupAnalogConfig.resx">
+      <DependentUpon>GroupAnalogConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lw\GroupAnalogStatus.resx">
+      <DependentUpon>GroupAnalogStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lw\GroupDescreteConfig.resx">
+      <DependentUpon>GroupDescreteConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lw\Groupdescretestatus.resx">
+      <DependentUpon>Groupdescretestatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lw\LowisForm.resx">
+      <DependentUpon>LowisForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lw\Mostrecenttest.resx">
+      <DependentUpon>Mostrecenttest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lw\TmpTest.resx">
+      <DependentUpon>TmpTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lw\WellCurrentStatus.resx">
+      <DependentUpon>WellCurrentStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lw\WellgroupStatus.resx">
+      <DependentUpon>WellgroupStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="lw2DataSet.xsc">
+      <DependentUpon>lw2DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="lw2DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>lw2DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="lw2DataSet.xss">
+      <DependentUpon>lw2DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="lw2DataSet1.xsc">
+      <DependentUpon>lw2DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="lw2DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>lw2DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="lw2DataSet1.xss">
+      <DependentUpon>lw2DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="lw2DataSet10.xsc">
+      <DependentUpon>lw2DataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="lw2DataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>lw2DataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="lw2DataSet10.xss">
+      <DependentUpon>lw2DataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="lw2DataSet11.xsc">
+      <DependentUpon>lw2DataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="lw2DataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>lw2DataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="lw2DataSet11.xss">
+      <DependentUpon>lw2DataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="lw2DataSet12.xsc">
+      <DependentUpon>lw2DataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="lw2DataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>lw2DataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="lw2DataSet12.xss">
+      <DependentUpon>lw2DataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="lw2DataSet13.xsc">
+      <DependentUpon>lw2DataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="lw2DataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>lw2DataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="lw2DataSet13.xss">
+      <DependentUpon>lw2DataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="lw2DataSet14.xsc">
+      <DependentUpon>lw2DataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="lw2DataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>lw2DataSet14.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="lw2DataSet14.xss">
+      <DependentUpon>lw2DataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="lw2DataSet15.xsc">
+      <DependentUpon>lw2DataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="lw2DataSet15.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>lw2DataSet15.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="lw2DataSet15.xss">
+      <DependentUpon>lw2DataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="lw2DataSet16.xsc">
+      <DependentUpon>lw2DataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="lw2DataSet16.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>lw2DataSet16.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="lw2DataSet16.xss">
+      <DependentUpon>lw2DataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="lw2DataSet17.xsc">
+      <DependentUpon>lw2DataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="lw2DataSet17.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>lw2DataSet17.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="lw2DataSet17.xss">
+      <DependentUpon>lw2DataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="lw2DataSet18.xsc">
+      <DependentUpon>lw2DataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="lw2DataSet18.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>lw2DataSet18.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="lw2DataSet18.xss">
+      <DependentUpon>lw2DataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="lw2DataSet19.xsc">
+      <DependentUpon>lw2DataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="lw2DataSet19.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>lw2DataSet19.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="lw2DataSet19.xss">
+      <DependentUpon>lw2DataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="lw2DataSet2.xsc">
+      <DependentUpon>lw2DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="lw2DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>lw2DataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="lw2DataSet2.xss">
+      <DependentUpon>lw2DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="lw2DataSet3.xsc">
+      <DependentUpon>lw2DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="lw2DataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>lw2DataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="lw2DataSet3.xss">
+      <DependentUpon>lw2DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="lw2DataSet4.xsc">
+      <DependentUpon>lw2DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="lw2DataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>lw2DataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="lw2DataSet4.xss">
+      <DependentUpon>lw2DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="lw2DataSet5.xsc">
+      <DependentUpon>lw2DataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="lw2DataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>lw2DataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="lw2DataSet5.xss">
+      <DependentUpon>lw2DataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="lw2DataSet6.xsc">
+      <DependentUpon>lw2DataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="lw2DataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>lw2DataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="lw2DataSet6.xss">
+      <DependentUpon>lw2DataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="lw2DataSet7.xsc">
+      <DependentUpon>lw2DataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="lw2DataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>lw2DataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="lw2DataSet7.xss">
+      <DependentUpon>lw2DataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="lw2DataSet8.xsc">
+      <DependentUpon>lw2DataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="lw2DataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>lw2DataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="lw2DataSet8.xss">
+      <DependentUpon>lw2DataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="lw2DataSet9.xsc">
+      <DependentUpon>lw2DataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="lw2DataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>lw2DataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="lw2DataSet9.xss">
+      <DependentUpon>lw2DataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BeamDiagnostics\" />
+    <Folder Include="MainMenu\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\Documents-icontop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\Alarm-Error-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\Analysis-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\system-analysis-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\chart-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\Settings-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\settings-icon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\performance-systeme-OS-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\First-Year-Production-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\Product-documentation-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\Status-mail-task-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\User-Files-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\Market-Analysis-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\Time-Machine-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\customer-service-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\Analytics-icon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
