@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery1 = new DevExpress.DataAccess.Sql.StoredProcQuery();
-            DevExpress.DataAccess.Sql.QueryParameter queryParameter1 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery4 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter4 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GroupAnalogStatus));
             this.prosedur_getdataBeamWellGroupConfigurationTableAdapter2 = new LowisChartApp.lw2DataSet7TableAdapters.prosedur_getdataBeamWellGroupConfigurationTableAdapter();
             this.lw2DataSet7 = new LowisChartApp.lw2DataSet7();
@@ -164,14 +164,14 @@
             // 
             this.sqlDataSource1.ConnectionName = "LowisChartApp.Properties.Settings.db_chartConnectionString";
             this.sqlDataSource1.Name = "sqlDataSource1";
-            storedProcQuery1.Name = "prosedur_getdataWellGroupStatus";
-            queryParameter1.Name = "@param";
-            queryParameter1.Type = typeof(string);
-            storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter1});
-            storedProcQuery1.StoredProcName = "prosedur_getdataWellGroupStatus";
+            storedProcQuery4.Name = "prosedur_getdataWellGroupStatus";
+            queryParameter4.Name = "@param";
+            queryParameter4.Type = typeof(string);
+            storedProcQuery4.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            queryParameter4});
+            storedProcQuery4.StoredProcName = "prosedur_getdataWellGroupStatus";
             this.sqlDataSource1.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
-            storedProcQuery1});
+            storedProcQuery4});
             this.sqlDataSource1.ResultSchemaSerializable = resources.GetString("sqlDataSource1.ResultSchemaSerializable");
             // 
             // prosedurgetdataBeamWellGroupConfigurationBindingSource
