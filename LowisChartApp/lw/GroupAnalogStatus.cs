@@ -11,6 +11,7 @@ using DevExpress.XtraEditors;
 using LowisChartApp.model;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraGrid;
+using System.Collections;
 
 namespace LowisChartApp.lw
 {
