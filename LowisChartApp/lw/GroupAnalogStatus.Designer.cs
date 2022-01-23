@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery4 = new DevExpress.DataAccess.Sql.StoredProcQuery();
-            DevExpress.DataAccess.Sql.QueryParameter queryParameter4 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery3 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter3 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GroupAnalogStatus));
             this.prosedur_getdataBeamWellGroupConfigurationTableAdapter2 = new LowisChartApp.lw2DataSet7TableAdapters.prosedur_getdataBeamWellGroupConfigurationTableAdapter();
             this.lw2DataSet7 = new LowisChartApp.lw2DataSet7();
@@ -71,6 +71,11 @@
             this.prosedurgetdataWellGroupStatusBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.prosedurgetdatabeamWellGroupStatusBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.prosedur_getdataGroupDescreteConfigTableAdapter = new LowisChartApp.lw2DataSet1TableAdapters.prosedur_getdataGroupDescreteConfigTableAdapter();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lw2DataSet10 = new LowisChartApp.lw2DataSet10();
+            this.prosedurgetdataGroupanalogstatusBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.prosedur_getdataGroupanalogstatusTableAdapter = new LowisChartApp.lw2DataSet10TableAdapters.prosedur_getdataGroupanalogstatusTableAdapter();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.gdLowis = new DevExpress.XtraGrid.GridControl();
             this.gvLowis = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colFacilityWellName = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -92,11 +97,7 @@
             this.colPointType = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEngUnits = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colOnTrend = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.gridSplitContainer1 = new DevExpress.XtraGrid.GridSplitContainer();
-            this.lw2DataSet10 = new LowisChartApp.lw2DataSet10();
-            this.prosedurgetdataGroupanalogstatusBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.prosedur_getdataGroupanalogstatusTableAdapter = new LowisChartApp.lw2DataSet10TableAdapters.prosedur_getdataGroupanalogstatusTableAdapter();
+            this.chartanalogtrend = new DevExpress.XtraCharts.ChartControl();
             ((System.ComponentModel.ISupportInitialize)(this.lw2DataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prosedurgetdataBeamWellGroupConfigurationBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lw2DataSet6)).BeginInit();
@@ -111,16 +112,16 @@
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.prosedurgetdataWellGroupStatusBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prosedurgetdatabeamWellGroupStatusBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gdLowis)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvLowis)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridSplitContainer1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridSplitContainer1.Panel1)).BeginInit();
-            this.gridSplitContainer1.Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridSplitContainer1.Panel2)).BeginInit();
-            this.gridSplitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lw2DataSet10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prosedurgetdataGroupanalogstatusBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gdLowis)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvLowis)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartanalogtrend)).BeginInit();
             this.SuspendLayout();
             // 
             // prosedur_getdataBeamWellGroupConfigurationTableAdapter2
@@ -164,14 +165,14 @@
             // 
             this.sqlDataSource1.ConnectionName = "LowisChartApp.Properties.Settings.db_chartConnectionString";
             this.sqlDataSource1.Name = "sqlDataSource1";
-            storedProcQuery4.Name = "prosedur_getdataWellGroupStatus";
-            queryParameter4.Name = "@param";
-            queryParameter4.Type = typeof(string);
-            storedProcQuery4.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter4});
-            storedProcQuery4.StoredProcName = "prosedur_getdataWellGroupStatus";
+            storedProcQuery3.Name = "prosedur_getdataWellGroupStatus";
+            queryParameter3.Name = "@param";
+            queryParameter3.Type = typeof(string);
+            storedProcQuery3.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            queryParameter3});
+            storedProcQuery3.StoredProcName = "prosedur_getdataWellGroupStatus";
             this.sqlDataSource1.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
-            storedProcQuery4});
+            storedProcQuery3});
             this.sqlDataSource1.ResultSchemaSerializable = resources.GetString("sqlDataSource1.ResultSchemaSerializable");
             // 
             // prosedurgetdataBeamWellGroupConfigurationBindingSource
@@ -406,18 +407,58 @@
             // 
             this.prosedur_getdataGroupDescreteConfigTableAdapter.ClearBeforeFill = true;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.splitContainer1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1412, 515);
+            this.panel2.TabIndex = 15;
+            // 
+            // lw2DataSet10
+            // 
+            this.lw2DataSet10.DataSetName = "lw2DataSet10";
+            this.lw2DataSet10.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // prosedurgetdataGroupanalogstatusBindingSource
+            // 
+            this.prosedurgetdataGroupanalogstatusBindingSource.DataMember = "prosedur_getdataGroupanalogstatus";
+            this.prosedurgetdataGroupanalogstatusBindingSource.DataSource = this.lw2DataSet10;
+            // 
+            // prosedur_getdataGroupanalogstatusTableAdapter
+            // 
+            this.prosedur_getdataGroupanalogstatusTableAdapter.ClearBeforeFill = true;
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.gdLowis);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.chartanalogtrend);
+            this.splitContainer1.Size = new System.Drawing.Size(1412, 515);
+            this.splitContainer1.SplitterDistance = 300;
+            this.splitContainer1.TabIndex = 0;
+            // 
             // gdLowis
             // 
             this.gdLowis.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gdLowis.Location = new System.Drawing.Point(0, 0);
             this.gdLowis.MainView = this.gvLowis;
             this.gdLowis.Name = "gdLowis";
-            this.gdLowis.Size = new System.Drawing.Size(1412, 515);
-            this.gdLowis.TabIndex = 0;
+            this.gdLowis.Size = new System.Drawing.Size(1412, 300);
+            this.gdLowis.TabIndex = 1;
             this.gdLowis.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvLowis});
-            this.gdLowis.Click += new System.EventHandler(this.gdLowis_Click);
-            this.gdLowis.MouseUp += new System.Windows.Forms.MouseEventHandler(this.gdLowis_MouseUp);
             // 
             // gvLowis
             // 
@@ -443,8 +484,8 @@
             this.colOnTrend});
             this.gvLowis.GridControl = this.gdLowis;
             this.gvLowis.Name = "gvLowis";
-            this.gvLowis.OptionsBehavior.Editable = false;
             this.gvLowis.OptionsView.ColumnAutoWidth = false;
+            this.gvLowis.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gvLowis_RowClick);
             // 
             // colFacilityWellName
             // 
@@ -579,42 +620,14 @@
             this.colOnTrend.Visible = true;
             this.colOnTrend.VisibleIndex = 18;
             // 
-            // panel2
+            // chartanalogtrend
             // 
-            this.panel2.Controls.Add(this.gridSplitContainer1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1412, 515);
-            this.panel2.TabIndex = 15;
-            // 
-            // gridSplitContainer1
-            // 
-            this.gridSplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridSplitContainer1.Grid = this.gdLowis;
-            this.gridSplitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.gridSplitContainer1.Name = "gridSplitContainer1";
-            // 
-            // gridSplitContainer1.Panel1
-            // 
-            this.gridSplitContainer1.Panel1.Controls.Add(this.gdLowis);
-            this.gridSplitContainer1.Size = new System.Drawing.Size(1412, 515);
-            this.gridSplitContainer1.TabIndex = 0;
-            // 
-            // lw2DataSet10
-            // 
-            this.lw2DataSet10.DataSetName = "lw2DataSet10";
-            this.lw2DataSet10.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // prosedurgetdataGroupanalogstatusBindingSource
-            // 
-            this.prosedurgetdataGroupanalogstatusBindingSource.DataMember = "prosedur_getdataGroupanalogstatus";
-            this.prosedurgetdataGroupanalogstatusBindingSource.DataSource = this.lw2DataSet10;
-            // 
-            // prosedur_getdataGroupanalogstatusTableAdapter
-            // 
-            this.prosedur_getdataGroupanalogstatusTableAdapter.ClearBeforeFill = true;
+            this.chartanalogtrend.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chartanalogtrend.Location = new System.Drawing.Point(0, 0);
+            this.chartanalogtrend.Name = "chartanalogtrend";
+            this.chartanalogtrend.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
+            this.chartanalogtrend.Size = new System.Drawing.Size(1412, 211);
+            this.chartanalogtrend.TabIndex = 0;
             // 
             // GroupAnalogStatus
             // 
@@ -641,16 +654,16 @@
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.prosedurgetdataWellGroupStatusBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.prosedurgetdatabeamWellGroupStatusBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gdLowis)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvLowis)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridSplitContainer1.Panel1)).EndInit();
-            this.gridSplitContainer1.Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridSplitContainer1.Panel2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridSplitContainer1)).EndInit();
-            this.gridSplitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.lw2DataSet10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.prosedurgetdataGroupanalogstatusBindingSource)).EndInit();
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gdLowis)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvLowis)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartanalogtrend)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -674,29 +687,7 @@
         private System.Windows.Forms.BindingSource prosedurgetdataWellGroupStatusBindingSource1;
         private System.Windows.Forms.BindingSource prosedurgetdatabeamWellGroupStatusBindingSource;
         private lw2DataSet1TableAdapters.prosedur_getdataGroupDescreteConfigTableAdapter prosedur_getdataGroupDescreteConfigTableAdapter;
-        private DevExpress.XtraGrid.GridControl gdLowis;
-        private DevExpress.XtraGrid.Views.Grid.GridView gvLowis;
         private System.Windows.Forms.Panel panel2;
-        private DevExpress.XtraGrid.Columns.GridColumn colFacilityWellName;
-        private DevExpress.XtraGrid.Columns.GridColumn colAnalogPointDescription;
-        private DevExpress.XtraGrid.Columns.GridColumn colCurrentValue;
-        private DevExpress.XtraGrid.Columns.GridColumn colTodayMaxValue;
-        private DevExpress.XtraGrid.Columns.GridColumn colTodayMinValue;
-        private DevExpress.XtraGrid.Columns.GridColumn colTodayAvgValue;
-        private DevExpress.XtraGrid.Columns.GridColumn colMonthlyAvgValue;
-        private DevExpress.XtraGrid.Columns.GridColumn colLastMonthAvgValue;
-        private DevExpress.XtraGrid.Columns.GridColumn colHiHiAlarm;
-        private DevExpress.XtraGrid.Columns.GridColumn colHiAlarm;
-        private DevExpress.XtraGrid.Columns.GridColumn colLoAlarm;
-        private DevExpress.XtraGrid.Columns.GridColumn colLoLoAlarm;
-        private DevExpress.XtraGrid.Columns.GridColumn colClamp;
-        private DevExpress.XtraGrid.Columns.GridColumn colSensorFail;
-        private DevExpress.XtraGrid.Columns.GridColumn colDate;
-        private DevExpress.XtraGrid.Columns.GridColumn colTime;
-        private DevExpress.XtraGrid.Columns.GridColumn colPointType;
-        private DevExpress.XtraGrid.Columns.GridColumn colEngUnits;
-        private DevExpress.XtraGrid.Columns.GridColumn colOnTrend;
-        private DevExpress.XtraGrid.GridSplitContainer gridSplitContainer1;
         private lw2DataSet10 lw2DataSet10;
         private System.Windows.Forms.BindingSource prosedurgetdataGroupanalogstatusBindingSource;
         private lw2DataSet10TableAdapters.prosedur_getdataGroupanalogstatusTableAdapter prosedur_getdataGroupanalogstatusTableAdapter;
@@ -721,5 +712,28 @@
         private System.Windows.Forms.ToolStripButton pasteToolStripButton2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripButton helpToolStripButton2;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private DevExpress.XtraGrid.GridControl gdLowis;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvLowis;
+        private DevExpress.XtraGrid.Columns.GridColumn colFacilityWellName;
+        private DevExpress.XtraGrid.Columns.GridColumn colAnalogPointDescription;
+        private DevExpress.XtraGrid.Columns.GridColumn colCurrentValue;
+        private DevExpress.XtraGrid.Columns.GridColumn colTodayMaxValue;
+        private DevExpress.XtraGrid.Columns.GridColumn colTodayMinValue;
+        private DevExpress.XtraGrid.Columns.GridColumn colTodayAvgValue;
+        private DevExpress.XtraGrid.Columns.GridColumn colMonthlyAvgValue;
+        private DevExpress.XtraGrid.Columns.GridColumn colLastMonthAvgValue;
+        private DevExpress.XtraGrid.Columns.GridColumn colHiHiAlarm;
+        private DevExpress.XtraGrid.Columns.GridColumn colHiAlarm;
+        private DevExpress.XtraGrid.Columns.GridColumn colLoAlarm;
+        private DevExpress.XtraGrid.Columns.GridColumn colLoLoAlarm;
+        private DevExpress.XtraGrid.Columns.GridColumn colClamp;
+        private DevExpress.XtraGrid.Columns.GridColumn colSensorFail;
+        private DevExpress.XtraGrid.Columns.GridColumn colDate;
+        private DevExpress.XtraGrid.Columns.GridColumn colTime;
+        private DevExpress.XtraGrid.Columns.GridColumn colPointType;
+        private DevExpress.XtraGrid.Columns.GridColumn colEngUnits;
+        private DevExpress.XtraGrid.Columns.GridColumn colOnTrend;
+        private DevExpress.XtraCharts.ChartControl chartanalogtrend;
     }
 }
