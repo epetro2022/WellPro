@@ -45,7 +45,7 @@ namespace LowisChartApp.lw
 
         private void gdLowis_Click(object sender, EventArgs e)
         {
-            string abc = "232";
+            string abc = "232", abce=String.Empty;
         }
 
         private void LoadData()
@@ -275,6 +275,18 @@ namespace LowisChartApp.lw
             }
 
 
+
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            frm = (frmMain)Application.OpenForms["frmMain"];
+            frm.ShowModule("Map");
+            frm.Show();
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
 
         }
     }

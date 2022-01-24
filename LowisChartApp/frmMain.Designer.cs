@@ -60,12 +60,6 @@
             this.defaultWellModelFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.diganosticReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
-            this.contexmgroup = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.addGroupToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.removeGroupToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.contexmitem = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.removeItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alarmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.beamAnalysisHistoryToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.beamAnalysisWorkbenchToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -180,6 +174,12 @@
             this.beamValveCheckWorkbenchToolStripMenuItem10 = new System.Windows.Forms.ToolStripMenuItem();
             this.buildUpAnalysisWorkbenchToolStripMenuItem9 = new System.Windows.Forms.ToolStripMenuItem();
             this.currentCycleManagementToolStripMenuItem10 = new System.Windows.Forms.ToolStripMenuItem();
+            this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
+            this.contexmgroup = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.addGroupToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.removeGroupToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.contexmitem = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.removeItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -311,9 +311,9 @@
             // 
             // btnfav
             // 
-            this.btnfav.Location = new System.Drawing.Point(108, 2);
+            this.btnfav.Location = new System.Drawing.Point(93, 2);
             this.btnfav.Name = "btnfav";
-            this.btnfav.Size = new System.Drawing.Size(70, 23);
+            this.btnfav.Size = new System.Drawing.Size(60, 23);
             this.btnfav.TabIndex = 0;
             this.btnfav.Text = "Favorite";
             this.btnfav.Click += new System.EventHandler(this.btnfav_Click);
@@ -483,45 +483,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(1059, 24);
             this.menuStrip1.TabIndex = 8;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // backgroundWorker2
-            // 
-            this.backgroundWorker2.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker2_DoWork);
-            this.backgroundWorker2.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker2_ProgressChanged);
-            this.backgroundWorker2.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker2_RunWorkerCompleted);
-            // 
-            // contexmgroup
-            // 
-            this.contexmgroup.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addGroupToolStripMenuItem1,
-            this.removeGroupToolStripMenuItem1});
-            this.contexmgroup.Name = "contexmgroup";
-            this.contexmgroup.Size = new System.Drawing.Size(177, 48);
-            // 
-            // addGroupToolStripMenuItem1
-            // 
-            this.addGroupToolStripMenuItem1.Name = "addGroupToolStripMenuItem1";
-            this.addGroupToolStripMenuItem1.Size = new System.Drawing.Size(176, 22);
-            this.addGroupToolStripMenuItem1.Text = "Add Item";
-            // 
-            // removeGroupToolStripMenuItem1
-            // 
-            this.removeGroupToolStripMenuItem1.Name = "removeGroupToolStripMenuItem1";
-            this.removeGroupToolStripMenuItem1.Size = new System.Drawing.Size(176, 22);
-            this.removeGroupToolStripMenuItem1.Text = "Remove Sub Group";
-            // 
-            // contexmitem
-            // 
-            this.contexmitem.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.removeItemToolStripMenuItem});
-            this.contexmitem.Name = "contexmitem";
-            this.contexmitem.Size = new System.Drawing.Size(145, 26);
-            // 
-            // removeItemToolStripMenuItem
-            // 
-            this.removeItemToolStripMenuItem.Name = "removeItemToolStripMenuItem";
-            this.removeItemToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.removeItemToolStripMenuItem.Text = "Remove Item";
             // 
             // alarmToolStripMenuItem
             // 
@@ -1383,6 +1344,45 @@
             this.currentCycleManagementToolStripMenuItem10.Size = new System.Drawing.Size(252, 22);
             this.currentCycleManagementToolStripMenuItem10.Text = "Well Test-Last 24 Hours";
             // 
+            // backgroundWorker2
+            // 
+            this.backgroundWorker2.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker2_DoWork);
+            this.backgroundWorker2.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker2_ProgressChanged);
+            this.backgroundWorker2.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker2_RunWorkerCompleted);
+            // 
+            // contexmgroup
+            // 
+            this.contexmgroup.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addGroupToolStripMenuItem1,
+            this.removeGroupToolStripMenuItem1});
+            this.contexmgroup.Name = "contexmgroup";
+            this.contexmgroup.Size = new System.Drawing.Size(177, 48);
+            // 
+            // addGroupToolStripMenuItem1
+            // 
+            this.addGroupToolStripMenuItem1.Name = "addGroupToolStripMenuItem1";
+            this.addGroupToolStripMenuItem1.Size = new System.Drawing.Size(176, 22);
+            this.addGroupToolStripMenuItem1.Text = "Add Item";
+            // 
+            // removeGroupToolStripMenuItem1
+            // 
+            this.removeGroupToolStripMenuItem1.Name = "removeGroupToolStripMenuItem1";
+            this.removeGroupToolStripMenuItem1.Size = new System.Drawing.Size(176, 22);
+            this.removeGroupToolStripMenuItem1.Text = "Remove Sub Group";
+            // 
+            // contexmitem
+            // 
+            this.contexmitem.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.removeItemToolStripMenuItem});
+            this.contexmitem.Name = "contexmitem";
+            this.contexmitem.Size = new System.Drawing.Size(145, 26);
+            // 
+            // removeItemToolStripMenuItem
+            // 
+            this.removeItemToolStripMenuItem.Name = "removeItemToolStripMenuItem";
+            this.removeItemToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.removeItemToolStripMenuItem.Text = "Remove Item";
+            // 
             // frmMain
             // 
             this.Appearance.Options.UseFont = true;
@@ -1397,7 +1397,7 @@
             this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("frmMain.IconOptions.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMain";
-            this.Text = "ePetro - Production Optimization System";
+            this.Text = "WellPro - Production Optimization System";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);

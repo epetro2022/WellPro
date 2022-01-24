@@ -41,8 +41,8 @@
             this.newToolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.EditToolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.DeleteToolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.printToolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.printToolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.cutToolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.copyToolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.pasteToolStripButton1 = new System.Windows.Forms.ToolStripButton();
@@ -203,6 +203,7 @@
             this.newToolStripButton1.Name = "newToolStripButton1";
             this.newToolStripButton1.Size = new System.Drawing.Size(23, 22);
             this.newToolStripButton1.Text = "&Add_New_Well";
+            this.newToolStripButton1.Click += new System.EventHandler(this.newToolStripButton1_Click);
             // 
             // EditToolStripButton1
             // 
@@ -222,6 +223,11 @@
             this.DeleteToolStripButton1.Size = new System.Drawing.Size(23, 22);
             this.DeleteToolStripButton1.Text = "&Delete Well";
             // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
             // printToolStripButton1
             // 
             this.printToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -230,11 +236,6 @@
             this.printToolStripButton1.Name = "printToolStripButton1";
             this.printToolStripButton1.Size = new System.Drawing.Size(23, 22);
             this.printToolStripButton1.Text = "&Print";
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // cutToolStripButton1
             // 

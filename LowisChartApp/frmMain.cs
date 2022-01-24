@@ -11,6 +11,7 @@ using LowisChartApp.lw;
 using LowisChartApp.model;
 using System.Threading;
 using LowisChartApp.utility;
+//
 
 namespace LowisChartApp
 {
@@ -33,6 +34,7 @@ namespace LowisChartApp
         WellgroupStatus moduleWellgroupStatus;
         AlarmHistory moduleAlarmHistory;
         BeamWellGroupConfiguration moduleBeamWellGroupConfiguration;
+        BeamWellGroupConfig moduleBeamWellGroupConfig;
         GroupDescreteConfig moduleGroupDescreteConfig;
         GroupAnalogConfig moduleGroupAnalogConfig;
         rw modulerw;
@@ -76,6 +78,7 @@ namespace LowisChartApp
         EspGroup moduleEspGroupCommFail;
         EspGroup moduleEspGroupCommOk;
         frmFav favDialog;
+        LowisChartApp.lw.Map.MapUserControl moduleMap;
         public frmMain()
         {
             InitializeComponent();
@@ -144,6 +147,51 @@ namespace LowisChartApp
                         lvWellCol("Discrete");
                         loaddatalv("Discrete");
                         Globals.treePilih = "Discrete";
+                    }
+                    break;
+                case "Beam Well Group Configuration 2":
+                    //MessageBox.Show("All");
+                    moduleBeamWellGroupConfig = new BeamWellGroupConfig();
+                    moduleBeamWellGroupConfig.Dock = DockStyle.Fill;
+                    if (splitContainer1.Panel2.Controls.Count > 0)
+                    {
+                        splitContainer1.Panel2.Controls.RemoveAt(0);
+                    }
+                    this.splitContainer1.Panel2.Controls.Clear();
+                    moduleBeamWellGroupConfig.Bounds = splitContainer1.Panel2.DisplayRectangle;
+                    this.splitContainer1.Panel2.Controls.Add(moduleBeamWellGroupConfig);
+                    this.splitContainer1.Panel2.Update();
+                    moduleBeamWellGroupConfig.Show();
+                    if (Globals.treePilih != "Beam")
+                    {
+                        lvWellCol("Beam");
+                        loaddatalv("Beam");
+                        Globals.treePilih = "Beam";
+                        ttJenis.Text = "Beam Well";
+                    }
+                    break;
+                case "Map":
+                    moduleMap = new LowisChartApp.lw.Map.MapUserControl();
+                    moduleMap.Dock = DockStyle.Fill;
+
+
+                    if (splitContainer1.Panel2.Controls.Count > 0)
+                    {
+                        splitContainer1.Panel2.Controls.RemoveAt(0);
+                    }
+                    this.splitContainer1.Panel2.Controls.Clear();
+                    modulePEDashboard.Bounds = splitContainer1.Panel2.DisplayRectangle;
+                    this.splitContainer1.Panel2.Controls.Add(moduleMap);
+                    this.splitContainer1.Panel2.Update();
+                    // Globals.parameterid = "";
+                    //Globals.idsp = 0;
+                    moduleMap.Show();
+                    if (Globals.treePilih != "Beam")
+                    {
+                        lvWellCol("Beam");
+                        loaddatalv("Beam");
+                        Globals.treePilih = "Beam";
+                        ttJenis.Text = "Beam Well";
                     }
                     break;
 
@@ -2122,7 +2170,9 @@ namespace LowisChartApp
 
         private void beamValveCheckWorkbenchToolStripMenuItem4_Click(object sender, EventArgs e)
         {
-            ShowModule("Beam Well Group Configuration");
+            //ShowModule("Beam Well Group Configuration");
+            ShowModule("Beam Well Group Configuration 2");
+            
         }
 
         private void beamAnalysisHistoryToolStripMenuItem1_Click(object sender, EventArgs e)

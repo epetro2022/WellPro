@@ -86,5 +86,10 @@ namespace LowisChartApp.lw
                 Globals.ForeignKey = row[1].ToString().Trim();
             }
         }
+
+        private void newToolStripButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
