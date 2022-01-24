@@ -470,6 +470,7 @@
             this.colOnTrend});
             this.gvLowis.GridControl = this.gdLowis;
             this.gvLowis.Name = "gvLowis";
+            this.gvLowis.OptionsBehavior.Editable = false;
             this.gvLowis.OptionsView.ColumnAutoWidth = false;
             this.gvLowis.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gvLowis_RowClick);
             // 
