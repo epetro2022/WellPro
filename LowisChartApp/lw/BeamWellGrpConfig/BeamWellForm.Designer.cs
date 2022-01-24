@@ -36,6 +36,7 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.beamWellDataSet1 = new LowisChartApp.ds.BeamWellGroupConfiguration.BeamWellDataSet();
             this.label2 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -210,12 +211,12 @@
             this.label70 = new System.Windows.Forms.Label();
             this.comboBox16 = new System.Windows.Forms.ComboBox();
             this.label69 = new System.Windows.Forms.Label();
-            this.beamWellDataSet1 = new LowisChartApp.ds.BeamWellDataSet();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.beamWellTableAdapter1 = new LowisChartApp.ds.BeamWellDataSetTableAdapters.BeamWellTableAdapter();
+            this.beam_Well_Group_ConfigurationTableAdapter1 = new LowisChartApp.ds.BeamWellGroupConfiguration.BeamWellDataSetTableAdapters.Beam_Well_Group_ConfigurationTableAdapter();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.beamWellDataSet1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -225,7 +226,6 @@
             this.groupBox2.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.tabPage6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.beamWellDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -298,11 +298,16 @@
             // 
             // textBox1
             // 
-            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.wellname", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.LWNAME", true));
             this.textBox1.Location = new System.Drawing.Point(104, 5);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(341, 20);
             this.textBox1.TabIndex = 31;
+            // 
+            // beamWellDataSet1
+            // 
+            this.beamWellDataSet1.DataSetName = "BeamWellDataSet";
+            this.beamWellDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label2
             // 
@@ -359,7 +364,7 @@
             // 
             // comboBox1
             // 
-            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.beamWellDataSet1, "BeamWell.Facility_Description", true));
+            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.beamWellDataSet1, "Beam_Well_Group_Configuration.FacilityDescription", true));
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(219, 223);
@@ -378,7 +383,7 @@
             // 
             // textBox9
             // 
-            this.textBox9.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.Group4", true));
+            this.textBox9.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.Group4Name", true));
             this.textBox9.Location = new System.Drawing.Point(219, 198);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(222, 20);
@@ -395,7 +400,7 @@
             // 
             // textBox8
             // 
-            this.textBox8.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.Group3", true));
+            this.textBox8.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.Group3Name", true));
             this.textBox8.Location = new System.Drawing.Point(219, 172);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(222, 20);
@@ -412,7 +417,7 @@
             // 
             // textBox7
             // 
-            this.textBox7.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.Group2", true));
+            this.textBox7.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.Group2Name", true));
             this.textBox7.Location = new System.Drawing.Point(219, 146);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(222, 20);
@@ -429,7 +434,7 @@
             // 
             // textBox6
             // 
-            this.textBox6.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.Group1", true));
+            this.textBox6.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.Group1Name", true));
             this.textBox6.Location = new System.Drawing.Point(219, 120);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(222, 20);
@@ -446,7 +451,7 @@
             // 
             // textBox5
             // 
-            this.textBox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.Internal_ID", true));
+            this.textBox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.Internal_ID", true));
             this.textBox5.Location = new System.Drawing.Point(219, 94);
             this.textBox5.Name = "textBox5";
             this.textBox5.ReadOnly = true;
@@ -464,7 +469,7 @@
             // 
             // textBox4
             // 
-            this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.Long_Name", true));
+            this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.LongName", true));
             this.textBox4.Location = new System.Drawing.Point(219, 68);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(222, 20);
@@ -481,7 +486,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.CAO_ID", true));
+            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.CAOID", true));
             this.textBox3.Location = new System.Drawing.Point(219, 42);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(222, 20);
@@ -498,7 +503,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.navigator_name", true));
+            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.NAVNAME", true));
             this.textBox2.Location = new System.Drawing.Point(219, 16);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(222, 20);
@@ -551,7 +556,7 @@
             // 
             // textBox19
             // 
-            this.textBox19.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.Max_Event_History_Recs", true));
+            this.textBox19.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.MaxEvent HistoryRecords", true));
             this.textBox19.Location = new System.Drawing.Point(219, 331);
             this.textBox19.Name = "textBox19";
             this.textBox19.Size = new System.Drawing.Size(222, 20);
@@ -568,7 +573,7 @@
             // 
             // textBox18
             // 
-            this.textBox18.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.Clear_Delay", true));
+            this.textBox18.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.ClearDelay", true));
             this.textBox18.Location = new System.Drawing.Point(219, 305);
             this.textBox18.Name = "textBox18";
             this.textBox18.Size = new System.Drawing.Size(222, 20);
@@ -585,7 +590,7 @@
             // 
             // textBox17
             // 
-            this.textBox17.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.Alarm_Delay", true));
+            this.textBox17.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.AlarmDelay", true));
             this.textBox17.Location = new System.Drawing.Point(219, 279);
             this.textBox17.Name = "textBox17";
             this.textBox17.Size = new System.Drawing.Size(222, 20);
@@ -602,7 +607,7 @@
             // 
             // textBox16
             // 
-            this.textBox16.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.Key_Off_Delay", true));
+            this.textBox16.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.KeyOffDelay", true));
             this.textBox16.Location = new System.Drawing.Point(219, 253);
             this.textBox16.Name = "textBox16";
             this.textBox16.Size = new System.Drawing.Size(222, 20);
@@ -619,7 +624,7 @@
             // 
             // textBox15
             // 
-            this.textBox15.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.Key_On_Delay", true));
+            this.textBox15.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.KeyOnDelay", true));
             this.textBox15.Location = new System.Drawing.Point(219, 227);
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(222, 20);
@@ -636,7 +641,7 @@
             // 
             // textBox14
             // 
-            this.textBox14.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.Comm_retry", true));
+            this.textBox14.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.CommRetries", true));
             this.textBox14.Location = new System.Drawing.Point(219, 201);
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(222, 20);
@@ -653,7 +658,7 @@
             // 
             // textBox13
             // 
-            this.textBox13.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.Alt_Address", true));
+            this.textBox13.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.AlternateAddress", true));
             this.textBox13.Location = new System.Drawing.Point(219, 175);
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(222, 20);
@@ -670,7 +675,7 @@
             // 
             // textBox12
             // 
-            this.textBox12.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.Communication_Address", true));
+            this.textBox12.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.CommAddress", true));
             this.textBox12.Location = new System.Drawing.Point(219, 149);
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(222, 20);
@@ -687,7 +692,7 @@
             // 
             // comboBox4
             // 
-            this.comboBox4.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.beamWellDataSet1, "BeamWell.Communication_Port", true));
+            this.comboBox4.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.beamWellDataSet1, "Beam_Well_Group_Configuration.CommPort", true));
             this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Items.AddRange(new object[] {
@@ -715,7 +720,7 @@
             // 
             // textBox11
             // 
-            this.textBox11.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.Communication_Protocol", true));
+            this.textBox11.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.CommProtocol", true));
             this.textBox11.Location = new System.Drawing.Point(219, 96);
             this.textBox11.Name = "textBox11";
             this.textBox11.ReadOnly = true;
@@ -733,7 +738,7 @@
             // 
             // comboBox3
             // 
-            this.comboBox3.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.beamWellDataSet1, "BeamWell.Sub_Controller_Type", true));
+            this.comboBox3.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.beamWellDataSet1, "Beam_Well_Group_Configuration.ControllerSubType", true));
             this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Items.AddRange(new object[] {
@@ -756,7 +761,7 @@
             // 
             // textBox10
             // 
-            this.textBox10.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.Controller_Type", true));
+            this.textBox10.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.RodPumpControllerType", true));
             this.textBox10.Location = new System.Drawing.Point(219, 43);
             this.textBox10.Name = "textBox10";
             this.textBox10.ReadOnly = true;
@@ -774,7 +779,7 @@
             // 
             // comboBox2
             // 
-            this.comboBox2.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.beamWellDataSet1, "BeamWell.Rodpum_Controller", true));
+            this.comboBox2.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.beamWellDataSet1, "Beam_Well_Group_Configuration.RodpumController", true));
             this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
@@ -793,9 +798,9 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(38, 19);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(101, 13);
+            this.label12.Size = new System.Drawing.Size(104, 13);
             this.label12.TabIndex = 28;
-            this.label12.Text = "Rod Pump Conroller";
+            this.label12.Text = "Rod Pump Controller";
             // 
             // tabPage3
             // 
@@ -833,7 +838,7 @@
             // 
             // textBox29
             // 
-            this.textBox29.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.Tubing_OD", true));
+            this.textBox29.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.TubingOD", true));
             this.textBox29.Location = new System.Drawing.Point(219, 316);
             this.textBox29.Name = "textBox29";
             this.textBox29.Size = new System.Drawing.Size(222, 20);
@@ -850,7 +855,7 @@
             // 
             // textBox28
             // 
-            this.textBox28.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.Casing_Weight", true));
+            this.textBox28.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.CasingWeight", true));
             this.textBox28.Location = new System.Drawing.Point(219, 290);
             this.textBox28.Name = "textBox28";
             this.textBox28.Size = new System.Drawing.Size(222, 20);
@@ -867,7 +872,7 @@
             // 
             // textBox27
             // 
-            this.textBox27.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.Casing_OD", true));
+            this.textBox27.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.CasingOD", true));
             this.textBox27.Location = new System.Drawing.Point(219, 264);
             this.textBox27.Name = "textBox27";
             this.textBox27.Size = new System.Drawing.Size(222, 20);
@@ -925,7 +930,7 @@
             // 
             // textBox26
             // 
-            this.textBox26.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.Pump_ID", true));
+            this.textBox26.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.PumpID", true));
             this.textBox26.Location = new System.Drawing.Point(219, 199);
             this.textBox26.Name = "textBox26";
             this.textBox26.Size = new System.Drawing.Size(222, 20);
@@ -942,7 +947,7 @@
             // 
             // textBox25
             // 
-            this.textBox25.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.Pump_Vertical", true));
+            this.textBox25.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.PumpVerticalDepth", true));
             this.textBox25.Location = new System.Drawing.Point(219, 173);
             this.textBox25.Name = "textBox25";
             this.textBox25.Size = new System.Drawing.Size(222, 20);
@@ -959,7 +964,7 @@
             // 
             // textBox24
             // 
-            this.textBox24.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.Pump_Measured", true));
+            this.textBox24.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.PumpMeasuredDepth", true));
             this.textBox24.Location = new System.Drawing.Point(219, 147);
             this.textBox24.Name = "textBox24";
             this.textBox24.Size = new System.Drawing.Size(222, 20);
@@ -976,7 +981,7 @@
             // 
             // textBox23
             // 
-            this.textBox23.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.Plug_Back_TD", true));
+            this.textBox23.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.PlugBackTD", true));
             this.textBox23.Location = new System.Drawing.Point(219, 121);
             this.textBox23.Name = "textBox23";
             this.textBox23.Size = new System.Drawing.Size(222, 20);
@@ -993,7 +998,7 @@
             // 
             // textBox22
             // 
-            this.textBox22.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.Anchor_depth", true));
+            this.textBox22.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.TACDepth", true));
             this.textBox22.Location = new System.Drawing.Point(219, 95);
             this.textBox22.Name = "textBox22";
             this.textBox22.Size = new System.Drawing.Size(222, 20);
@@ -1010,7 +1015,7 @@
             // 
             // textBox21
             // 
-            this.textBox21.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.Bottom_Perforation", true));
+            this.textBox21.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.BottomPerfs", true));
             this.textBox21.Location = new System.Drawing.Point(219, 69);
             this.textBox21.Name = "textBox21";
             this.textBox21.Size = new System.Drawing.Size(222, 20);
@@ -1027,7 +1032,7 @@
             // 
             // textBox20
             // 
-            this.textBox20.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.Top_Perforation", true));
+            this.textBox20.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.TopPerfs", true));
             this.textBox20.Location = new System.Drawing.Point(219, 43);
             this.textBox20.Name = "textBox20";
             this.textBox20.Size = new System.Drawing.Size(222, 20);
@@ -1044,7 +1049,7 @@
             // 
             // comboBox5
             // 
-            this.comboBox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.Sub_Controller_Type", true));
+            this.comboBox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.ControllerSubType", true));
             this.comboBox5.Enabled = false;
             this.comboBox5.FormattingEnabled = true;
             this.comboBox5.Location = new System.Drawing.Point(219, 16);
@@ -1150,7 +1155,7 @@
             // 
             // textBox43
             // 
-            this.textBox43.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.Fluid_Level_Comment", true));
+            this.textBox43.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.FluidLevelComment", true));
             this.textBox43.Location = new System.Drawing.Point(219, 433);
             this.textBox43.Name = "textBox43";
             this.textBox43.Size = new System.Drawing.Size(222, 20);
@@ -1177,7 +1182,7 @@
             // dateTimePicker2
             // 
             this.dateTimePicker2.CustomFormat = "dd/MM/yyyy HH:mm:ss";
-            this.dateTimePicker2.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.beamWellDataSet1, "BeamWell.Fluid_Level_Shot_Date", true));
+            this.dateTimePicker2.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.beamWellDataSet1, "Beam_Well_Group_Configuration.FluidLevelDate", true));
             this.dateTimePicker2.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker2.Location = new System.Drawing.Point(219, 407);
@@ -1188,7 +1193,7 @@
             // 
             // textBox42
             // 
-            this.textBox42.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.Fluid_Above_Pump", true));
+            this.textBox42.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.FluidAbovePump", true));
             this.textBox42.Location = new System.Drawing.Point(219, 381);
             this.textBox42.Name = "textBox42";
             this.textBox42.Size = new System.Drawing.Size(222, 20);
@@ -1205,7 +1210,7 @@
             // 
             // textBox41
             // 
-            this.textBox41.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.Fluid_Level_From_Surface", true));
+            this.textBox41.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.FLevelfromSurface", true));
             this.textBox41.Location = new System.Drawing.Point(219, 355);
             this.textBox41.Name = "textBox41";
             this.textBox41.Size = new System.Drawing.Size(222, 20);
@@ -1222,7 +1227,7 @@
             // 
             // textBox40
             // 
-            this.textBox40.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.Casing_Oil_Cut", true));
+            this.textBox40.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.CasingOilCut", true));
             this.textBox40.Location = new System.Drawing.Point(219, 329);
             this.textBox40.Name = "textBox40";
             this.textBox40.Size = new System.Drawing.Size(222, 20);
@@ -1239,7 +1244,7 @@
             // 
             // textBox39
             // 
-            this.textBox39.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.Casing_Press", true));
+            this.textBox39.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.CasingPres", true));
             this.textBox39.Location = new System.Drawing.Point(219, 303);
             this.textBox39.Name = "textBox39";
             this.textBox39.Size = new System.Drawing.Size(222, 20);
@@ -1256,7 +1261,7 @@
             // 
             // textBox38
             // 
-            this.textBox38.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.Tubing_Temp_Whead", true));
+            this.textBox38.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.WheadTemp", true));
             this.textBox38.Location = new System.Drawing.Point(219, 277);
             this.textBox38.Name = "textBox38";
             this.textBox38.Size = new System.Drawing.Size(222, 20);
@@ -1273,7 +1278,7 @@
             // 
             // textBox37
             // 
-            this.textBox37.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.Tubing_Gradient", true));
+            this.textBox37.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.TubingGrad", true));
             this.textBox37.Location = new System.Drawing.Point(219, 251);
             this.textBox37.Name = "textBox37";
             this.textBox37.Size = new System.Drawing.Size(222, 20);
@@ -1281,16 +1286,17 @@
             // 
             // label46
             // 
+            this.label46.AutoEllipsis = true;
             this.label46.AutoSize = true;
             this.label46.Location = new System.Drawing.Point(15, 254);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(113, 13);
+            this.label46.Size = new System.Drawing.Size(116, 13);
             this.label46.TabIndex = 50;
-            this.label46.Text = "TubingGradient (psi/ft)";
+            this.label46.Text = "Tubing Gradient (psi/ft)";
             // 
             // textBox36
             // 
-            this.textBox36.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.Tubing_Press", true));
+            this.textBox36.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.TubingPres", true));
             this.textBox36.Location = new System.Drawing.Point(219, 225);
             this.textBox36.Name = "textBox36";
             this.textBox36.Size = new System.Drawing.Size(222, 20);
@@ -1307,7 +1313,7 @@
             // 
             // textBox35
             // 
-            this.textBox35.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.Gas_Sp_Grav", true));
+            this.textBox35.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.GasSpGravity", true));
             this.textBox35.Location = new System.Drawing.Point(219, 199);
             this.textBox35.Name = "textBox35";
             this.textBox35.Size = new System.Drawing.Size(222, 20);
@@ -1324,7 +1330,7 @@
             // 
             // textBox34
             // 
-            this.textBox34.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.Water_SP_Grav", true));
+            this.textBox34.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.WaterSpGravity", true));
             this.textBox34.Location = new System.Drawing.Point(219, 173);
             this.textBox34.Name = "textBox34";
             this.textBox34.Size = new System.Drawing.Size(222, 20);
@@ -1341,7 +1347,7 @@
             // 
             // textBox33
             // 
-            this.textBox33.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.Oil_Gravity", true));
+            this.textBox33.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.OilGravity", true));
             this.textBox33.Location = new System.Drawing.Point(219, 147);
             this.textBox33.Name = "textBox33";
             this.textBox33.Size = new System.Drawing.Size(222, 20);
@@ -1368,7 +1374,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.CustomFormat = "dd/MM/yyyy HH:mm:ss";
-            this.dateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.beamWellDataSet1, "BeamWell.Last_WT_date", true));
+            this.dateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.beamWellDataSet1, "Beam_Well_Group_Configuration.LastWellTestDate", true));
             this.dateTimePicker1.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Location = new System.Drawing.Point(219, 121);
@@ -1379,7 +1385,7 @@
             // 
             // textBox32
             // 
-            this.textBox32.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.Gas", true));
+            this.textBox32.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.Gas", true));
             this.textBox32.Location = new System.Drawing.Point(219, 95);
             this.textBox32.Name = "textBox32";
             this.textBox32.Size = new System.Drawing.Size(222, 20);
@@ -1396,7 +1402,7 @@
             // 
             // textBox31
             // 
-            this.textBox31.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.Water", true));
+            this.textBox31.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.Water", true));
             this.textBox31.Location = new System.Drawing.Point(219, 69);
             this.textBox31.Name = "textBox31";
             this.textBox31.Size = new System.Drawing.Size(222, 20);
@@ -1413,7 +1419,7 @@
             // 
             // textBox30
             // 
-            this.textBox30.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.Oil", true));
+            this.textBox30.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.Oil", true));
             this.textBox30.Location = new System.Drawing.Point(219, 43);
             this.textBox30.Name = "textBox30";
             this.textBox30.Size = new System.Drawing.Size(222, 20);
@@ -1430,7 +1436,7 @@
             // 
             // comboBox6
             // 
-            this.comboBox6.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.Sub_Controller_Type", true));
+            this.comboBox6.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.ControllerSubType", true));
             this.comboBox6.Enabled = false;
             this.comboBox6.FormattingEnabled = true;
             this.comboBox6.Location = new System.Drawing.Point(219, 16);
@@ -1487,7 +1493,7 @@
             // 
             // textBox48
             // 
-            this.textBox48.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.Min_Air_Balance_Press", true));
+            this.textBox48.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.MinAirBalPres", true));
             this.textBox48.Location = new System.Drawing.Point(219, 363);
             this.textBox48.Name = "textBox48";
             this.textBox48.Size = new System.Drawing.Size(222, 20);
@@ -1504,7 +1510,7 @@
             // 
             // textBox47
             // 
-            this.textBox47.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.Max_Air_Balance_Press", true));
+            this.textBox47.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.MaxAirBalPres", true));
             this.textBox47.Location = new System.Drawing.Point(219, 337);
             this.textBox47.Name = "textBox47";
             this.textBox47.Size = new System.Drawing.Size(222, 20);
@@ -1521,7 +1527,7 @@
             // 
             // textBox46
             // 
-            this.textBox46.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.Measured_Motor_Amps_Down", true));
+            this.textBox46.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.MeasMotorAmps1", true));
             this.textBox46.Location = new System.Drawing.Point(219, 311);
             this.textBox46.Name = "textBox46";
             this.textBox46.Size = new System.Drawing.Size(222, 20);
@@ -1538,7 +1544,7 @@
             // 
             // textBox45
             // 
-            this.textBox45.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.Measured_Motor_Amps_Up", true));
+            this.textBox45.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.MeasMotorAmps", true));
             this.textBox45.Location = new System.Drawing.Point(219, 285);
             this.textBox45.Name = "textBox45";
             this.textBox45.Size = new System.Drawing.Size(222, 20);
@@ -1555,7 +1561,7 @@
             // 
             // comboBox15
             // 
-            this.comboBox15.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.beamWellDataSet1, "BeamWell.Slip_Torque", true));
+            this.comboBox15.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.beamWellDataSet1, "Beam_Well_Group_Configuration.SlipTorque", true));
             this.comboBox15.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox15.FormattingEnabled = true;
             this.comboBox15.Items.AddRange(new object[] {
@@ -1578,7 +1584,7 @@
             // 
             // comboBox14
             // 
-            this.comboBox14.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.beamWellDataSet1, "BeamWell.Motor_Size", true));
+            this.comboBox14.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.beamWellDataSet1, "Beam_Well_Group_Configuration.MotorSize", true));
             this.comboBox14.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox14.FormattingEnabled = true;
             this.comboBox14.Items.AddRange(new object[] {
@@ -1599,7 +1605,7 @@
             // 
             // comboBox13
             // 
-            this.comboBox13.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.beamWellDataSet1, "BeamWell.Motor_Type", true));
+            this.comboBox13.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.beamWellDataSet1, "Beam_Well_Group_Configuration.MotorType", true));
             this.comboBox13.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox13.FormattingEnabled = true;
             this.comboBox13.Items.AddRange(new object[] {
@@ -1622,7 +1628,7 @@
             // 
             // comboBox12
             // 
-            this.comboBox12.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.beamWellDataSet1, "BeamWell.Rotation", true));
+            this.comboBox12.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.beamWellDataSet1, "Beam_Well_Group_Configuration.UnitRotation", true));
             this.comboBox12.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox12.FormattingEnabled = true;
             this.comboBox12.Items.AddRange(new object[] {
@@ -1644,7 +1650,7 @@
             // 
             // comboBox11
             // 
-            this.comboBox11.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.beamWellDataSet1, "BeamWell.Torque_Methode", true));
+            this.comboBox11.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.beamWellDataSet1, "Beam_Well_Group_Configuration.TorqueCalcMethod", true));
             this.comboBox11.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox11.FormattingEnabled = true;
             this.comboBox11.Items.AddRange(new object[] {
@@ -1667,7 +1673,7 @@
             // 
             // textBox44
             // 
-            this.textBox44.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.Actual_Stroke", true));
+            this.textBox44.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.ActualStrokLength", true));
             this.textBox44.Location = new System.Drawing.Point(219, 124);
             this.textBox44.Name = "textBox44";
             this.textBox44.Size = new System.Drawing.Size(222, 20);
@@ -1684,7 +1690,7 @@
             // 
             // comboBox10
             // 
-            this.comboBox10.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.beamWellDataSet1, "BeamWell.Wrist_Pin", true));
+            this.comboBox10.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.beamWellDataSet1, "Beam_Well_Group_Configuration.WristPin", true));
             this.comboBox10.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox10.FormattingEnabled = true;
             this.comboBox10.Items.AddRange(new object[] {
@@ -1709,7 +1715,7 @@
             // 
             // comboBox9
             // 
-            this.comboBox9.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.beamWellDataSet1, "BeamWell.Pumping_Unit", true));
+            this.comboBox9.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.beamWellDataSet1, "Beam_Well_Group_Configuration.PumpingUnitManuf", true));
             this.comboBox9.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox9.FormattingEnabled = true;
             this.comboBox9.Location = new System.Drawing.Point(219, 70);
@@ -1728,7 +1734,7 @@
             // 
             // comboBox8
             // 
-            this.comboBox8.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.beamWellDataSet1, "BeamWell.Unit_Type", true));
+            this.comboBox8.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.beamWellDataSet1, "Beam_Well_Group_Configuration.PUnitType", true));
             this.comboBox8.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox8.FormattingEnabled = true;
             this.comboBox8.Items.AddRange(new object[] {
@@ -1749,7 +1755,7 @@
             // 
             // comboBox7
             // 
-            this.comboBox7.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.Sub_Controller_Type", true));
+            this.comboBox7.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.ControllerSubType", true));
             this.comboBox7.Enabled = false;
             this.comboBox7.FormattingEnabled = true;
             this.comboBox7.Location = new System.Drawing.Point(219, 16);
@@ -1808,7 +1814,7 @@
             // 
             // comboBox22
             // 
-            this.comboBox22.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.beamWellDataSet1, "BeamWell.C2_Lag_Aux_Wt", true));
+            this.comboBox22.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.beamWellDataSet1, "Beam_Well_Group_Configuration.C2LaAuxWeightID", true));
             this.comboBox22.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox22.FormattingEnabled = true;
             this.comboBox22.Items.AddRange(new object[] {
@@ -1833,7 +1839,7 @@
             // 
             // comboBox23
             // 
-            this.comboBox23.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.beamWellDataSet1, "BeamWell.C2_Lag_Primary_Wt", true));
+            this.comboBox23.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.beamWellDataSet1, "Beam_Well_Group_Configuration.C2LagPrimaryWeightID", true));
             this.comboBox23.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox23.FormattingEnabled = true;
             this.comboBox23.Items.AddRange(new object[] {
@@ -1858,7 +1864,7 @@
             // 
             // textBox52
             // 
-            this.textBox52.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.C2_lag_Distance", true));
+            this.textBox52.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.C2LagDist", true));
             this.textBox52.Location = new System.Drawing.Point(219, 338);
             this.textBox52.Name = "textBox52";
             this.textBox52.Size = new System.Drawing.Size(222, 20);
@@ -1875,7 +1881,7 @@
             // 
             // comboBox24
             // 
-            this.comboBox24.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.beamWellDataSet1, "BeamWell.C2_Lead_Aux_WT", true));
+            this.comboBox24.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.beamWellDataSet1, "Beam_Well_Group_Configuration.C2LeadAuxWeightID", true));
             this.comboBox24.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox24.FormattingEnabled = true;
             this.comboBox24.Items.AddRange(new object[] {
@@ -1900,7 +1906,7 @@
             // 
             // comboBox25
             // 
-            this.comboBox25.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.beamWellDataSet1, "BeamWell.C2_Lead_Primary_Wt", true));
+            this.comboBox25.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.beamWellDataSet1, "Beam_Well_Group_Configuration.C2LeadPrimaryWeighID", true));
             this.comboBox25.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox25.FormattingEnabled = true;
             this.comboBox25.Items.AddRange(new object[] {
@@ -1925,7 +1931,7 @@
             // 
             // textBox53
             // 
-            this.textBox53.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.C2_Lead_Distance", true));
+            this.textBox53.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.C2LeadDist", true));
             this.textBox53.Location = new System.Drawing.Point(219, 258);
             this.textBox53.Name = "textBox53";
             this.textBox53.Size = new System.Drawing.Size(222, 20);
@@ -1942,7 +1948,7 @@
             // 
             // comboBox20
             // 
-            this.comboBox20.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.beamWellDataSet1, "BeamWell.C1_Lag_Aux_Wt", true));
+            this.comboBox20.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.beamWellDataSet1, "Beam_Well_Group_Configuration.C1Lag AuxWeighID", true));
             this.comboBox20.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox20.FormattingEnabled = true;
             this.comboBox20.Items.AddRange(new object[] {
@@ -1967,7 +1973,7 @@
             // 
             // comboBox21
             // 
-            this.comboBox21.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.beamWellDataSet1, "BeamWell.C1_Lag_Primary_Wt", true));
+            this.comboBox21.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.beamWellDataSet1, "Beam_Well_Group_Configuration.C1LagPrimaryWeightID", true));
             this.comboBox21.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox21.FormattingEnabled = true;
             this.comboBox21.Items.AddRange(new object[] {
@@ -1992,7 +1998,7 @@
             // 
             // textBox51
             // 
-            this.textBox51.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.C1_lag_Distance", true));
+            this.textBox51.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.C1LagDist", true));
             this.textBox51.Location = new System.Drawing.Point(219, 176);
             this.textBox51.Name = "textBox51";
             this.textBox51.Size = new System.Drawing.Size(222, 20);
@@ -2009,7 +2015,7 @@
             // 
             // comboBox19
             // 
-            this.comboBox19.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.beamWellDataSet1, "BeamWell.C1_Lead_Aux_WT", true));
+            this.comboBox19.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.beamWellDataSet1, "Beam_Well_Group_Configuration.C1LeadAuxWeight", true));
             this.comboBox19.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox19.FormattingEnabled = true;
             this.comboBox19.Location = new System.Drawing.Point(219, 149);
@@ -2028,7 +2034,7 @@
             // 
             // comboBox18
             // 
-            this.comboBox18.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.beamWellDataSet1, "BeamWell.C1_Lead_Primary_Wt", true));
+            this.comboBox18.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.beamWellDataSet1, "Beam_Well_Group_Configuration.C1LeadPrimaryWeightID", true));
             this.comboBox18.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox18.FormattingEnabled = true;
             this.comboBox18.Items.AddRange(new object[] {
@@ -2053,7 +2059,7 @@
             // 
             // textBox50
             // 
-            this.textBox50.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.C1_Lead_Distance", true));
+            this.textBox50.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.C1Lead Dist", true));
             this.textBox50.Location = new System.Drawing.Point(219, 96);
             this.textBox50.Name = "textBox50";
             this.textBox50.Size = new System.Drawing.Size(222, 20);
@@ -2070,7 +2076,7 @@
             // 
             // textBox49
             // 
-            this.textBox49.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.CBT", true));
+            this.textBox49.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.CBTCBE", true));
             this.textBox49.Location = new System.Drawing.Point(219, 70);
             this.textBox49.Name = "textBox49";
             this.textBox49.Size = new System.Drawing.Size(222, 20);
@@ -2087,7 +2093,7 @@
             // 
             // comboBox17
             // 
-            this.comboBox17.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.beamWellDataSet1, "BeamWell.Crank_ID", true));
+            this.comboBox17.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.beamWellDataSet1, "Beam_Well_Group_Configuration.CrankID", true));
             this.comboBox17.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox17.FormattingEnabled = true;
             this.comboBox17.Items.AddRange(new object[] {
@@ -2108,7 +2114,7 @@
             // 
             // comboBox16
             // 
-            this.comboBox16.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "BeamWell.Sub_Controller_Type", true));
+            this.comboBox16.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.beamWellDataSet1, "Beam_Well_Group_Configuration.ControllerSubType", true));
             this.comboBox16.Enabled = false;
             this.comboBox16.FormattingEnabled = true;
             this.comboBox16.Location = new System.Drawing.Point(219, 16);
@@ -2125,19 +2131,14 @@
             this.label69.TabIndex = 36;
             this.label69.Text = "Sub Type Controller";
             // 
-            // beamWellDataSet1
-            // 
-            this.beamWellDataSet1.DataSetName = "BeamWellDataSet";
-            this.beamWellDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // bindingSource1
             // 
-            this.bindingSource1.DataMember = "BeamWell";
+            this.bindingSource1.DataMember = "Beam_Well_Group_Configuration";
             this.bindingSource1.DataSource = this.beamWellDataSet1;
             // 
-            // beamWellTableAdapter1
+            // beam_Well_Group_ConfigurationTableAdapter1
             // 
-            this.beamWellTableAdapter1.ClearBeforeFill = true;
+            this.beam_Well_Group_ConfigurationTableAdapter1.ClearBeforeFill = true;
             // 
             // FormBeamWell
             // 
@@ -2158,6 +2159,7 @@
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.beamWellDataSet1)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -2175,7 +2177,6 @@
             this.tabPage5.PerformLayout();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.beamWellDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
 
@@ -2183,7 +2184,7 @@
 
         #endregion
 
-        private ds.BeamWellDataSet beamWellDataSet1;
+        private ds.BeamWellGroupConfiguration.BeamWellDataSet beamWellDataSet1;
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TabControl tabControl1;
@@ -2320,7 +2321,6 @@
         private System.Windows.Forms.Label label59;
         private System.Windows.Forms.ComboBox comboBox11;
         private System.Windows.Forms.Label label60;
-        private ds.BeamWellDataSetTableAdapters.BeamWellTableAdapter beamWellTableAdapter1;
         private System.Windows.Forms.ComboBox comboBox12;
         private System.Windows.Forms.Label label61;
         private System.Windows.Forms.ComboBox comboBox14;
@@ -2367,6 +2367,7 @@
         private System.Windows.Forms.Label label82;
         private System.Windows.Forms.TextBox textBox53;
         private System.Windows.Forms.Label label83;
+        private ds.BeamWellGroupConfiguration.BeamWellDataSetTableAdapters.Beam_Well_Group_ConfigurationTableAdapter beam_Well_Group_ConfigurationTableAdapter1;
     }
 }
 

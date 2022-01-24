@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="db_chartConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="db_chartConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.LowisChartApp.Properties.Settings.GlobalReference.Default.db_chartConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="MapDataTableAdapter" GeneratorDataComponentClassName="MapDataTableAdapter" Name="MapDataTable" UserDataComponentName="MapDataTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="db_chartConnectionString (Settings)" DbObjectName="ePetro.dbo.beamWellGroupStatus" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        MASTER_WELL_MAP.X_LATITUDE, MASTER_WELL_MAP.Y_LONGITUDE, beamWellGroupStatus.MotorStatus, MASTER_WELL_MAP.WELLNAME
+FROM            beamWellGroupStatus RIGHT OUTER JOIN
+                         MASTER_WELL_MAP ON beamWellGroupStatus.WellName = MASTER_WELL_MAP.WELLNAME</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="X_LATITUDE" DataSetColumn="X_LATITUDE" />
+              <Mapping SourceColumn="Y_LONGITUDE" DataSetColumn="Y_LONGITUDE" />
+              <Mapping SourceColumn="MotorStatus" DataSetColumn="MotorStatus" />
+              <Mapping SourceColumn="WELLNAME" DataSetColumn="WELLNAME" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DataSet1" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="MapDataTable" msprop:Generator_RowClassName="MapDataTableRow" msprop:Generator_RowEvHandlerName="MapDataTableRowChangeEventHandler" msprop:Generator_RowDeletedName="MapDataTableRowDeleted" msprop:Generator_RowDeletingName="MapDataTableRowDeleting" msprop:Generator_RowEvArgName="MapDataTableRowChangeEvent" msprop:Generator_TablePropName="MapDataTable" msprop:Generator_RowChangedName="MapDataTableRowChanged" msprop:Generator_UserTableName="MapDataTable" msprop:Generator_RowChangingName="MapDataTableRowChanging" msprop:Generator_TableClassName="MapDataTableDataTable" msprop:Generator_TableVarName="tableMapDataTable">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="X_LATITUDE" msprop:Generator_UserColumnName="X_LATITUDE" msprop:Generator_ColumnPropNameInTable="X_LATITUDEColumn" msprop:Generator_ColumnPropNameInRow="X_LATITUDE" msprop:Generator_ColumnVarNameInTable="columnX_LATITUDE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Y_LONGITUDE" msprop:Generator_UserColumnName="Y_LONGITUDE" msprop:Generator_ColumnPropNameInTable="Y_LONGITUDEColumn" msprop:Generator_ColumnPropNameInRow="Y_LONGITUDE" msprop:Generator_ColumnVarNameInTable="columnY_LONGITUDE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MotorStatus" msprop:Generator_UserColumnName="MotorStatus" msprop:Generator_ColumnPropNameInTable="MotorStatusColumn" msprop:Generator_ColumnPropNameInRow="MotorStatus" msprop:Generator_ColumnVarNameInTable="columnMotorStatus" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WELLNAME" msprop:Generator_UserColumnName="WELLNAME" msprop:Generator_ColumnPropNameInTable="WELLNAMEColumn" msprop:Generator_ColumnPropNameInRow="WELLNAME" msprop:Generator_ColumnVarNameInTable="columnWELLNAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

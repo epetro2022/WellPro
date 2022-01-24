@@ -72,7 +72,11 @@
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Windows.Forms.MapControl, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinFormsMapControl.1.1.0\lib\net451\System.Windows.Forms.MapControl.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -89,10 +93,16 @@
     <Compile Include="BeamWellConditions\BeamWellCondition.Designer.cs">
       <DependentUpon>BeamWellCondition.cs</DependentUpon>
     </Compile>
-    <Compile Include="ds\BeamWellDataSet1.Designer.cs">
+    <Compile Include="ds\BeamWellGroupConfiguration\BeamWellDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BeamWellDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds\Map\MapDataSet.cs">
+      <DependentUpon>MapDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds\Map\MapDataSet.Designer.cs">
+      <DependentUpon>MapDataSet.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
@@ -230,17 +240,23 @@
     <Compile Include="lw\BeamWellCurrentStatusMain.Designer.cs">
       <DependentUpon>BeamWellCurrentStatusMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="lw\BeamWellForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="lw\BeamWellForm.Designer.cs">
-      <DependentUpon>BeamWellForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="lw\BeamWellGroupConfiguration.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="lw\BeamWellGroupConfiguration.Designer.cs">
       <DependentUpon>BeamWellGroupConfiguration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lw\BeamWellGrpConfig\BeamWellForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lw\BeamWellGrpConfig\BeamWellForm.Designer.cs">
+      <DependentUpon>BeamWellForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lw\BeamWellGrpConfig\BeamWellGroupConfig.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="lw\BeamWellGrpConfig\BeamWellGroupConfig.Designer.cs">
+      <DependentUpon>BeamWellGroupConfig.cs</DependentUpon>
     </Compile>
     <Compile Include="lw\browser.cs">
       <SubType>Form</SubType>
@@ -307,6 +323,12 @@
     </Compile>
     <Compile Include="lw\LowisForm.Designer.cs">
       <DependentUpon>LowisForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lw\Map\MapUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="lw\Map\MapUserControl.Designer.cs">
+      <DependentUpon>MapUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="lw\Mostrecenttest.cs">
       <SubType>UserControl</SubType>
@@ -425,11 +447,14 @@
     <EmbeddedResource Include="lw\BeamWellCurrentStatusMain.resx">
       <DependentUpon>BeamWellCurrentStatusMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="lw\BeamWellForm.resx">
-      <DependentUpon>BeamWellForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="lw\BeamWellGroupConfiguration.resx">
       <DependentUpon>BeamWellGroupConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lw\BeamWellGrpConfig\BeamWellForm.resx">
+      <DependentUpon>BeamWellForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lw\BeamWellGrpConfig\BeamWellGroupConfig.resx">
+      <DependentUpon>BeamWellGroupConfig.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="lw\browser.resx">
       <DependentUpon>browser.cs</DependentUpon>
@@ -463,6 +488,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="lw\LowisForm.resx">
       <DependentUpon>LowisForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lw\Map\MapUserControl.resx">
+      <DependentUpon>MapUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="lw\Mostrecenttest.resx">
       <DependentUpon>Mostrecenttest.cs</DependentUpon>
@@ -520,16 +548,27 @@
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="ds\BeamWellDataSet.xsc">
+    <None Include="ds\BeamWellGroupConfiguration\BeamWellDataSet.xsc">
       <DependentUpon>BeamWellDataSet.xsd</DependentUpon>
     </None>
-    <None Include="ds\BeamWellDataSet.xsd">
+    <None Include="ds\BeamWellGroupConfiguration\BeamWellDataSet.xsd">
+      <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BeamWellDataSet1.Designer.cs</LastGenOutput>
+      <LastGenOutput>BeamWellDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ds\BeamWellGroupConfiguration\BeamWellDataSet.xss">
+      <DependentUpon>BeamWellDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ds\Map\MapDataSet.xsc">
+      <DependentUpon>MapDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ds\Map\MapDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MapDataSet1.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="ds\BeamWellDataSet.xss">
-      <DependentUpon>BeamWellDataSet.xsd</DependentUpon>
+    <None Include="ds\Map\MapDataSet.xss">
+      <DependentUpon>MapDataSet.xsd</DependentUpon>
     </None>
     <None Include="lw2DataSet.xsc">
       <DependentUpon>lw2DataSet.xsd</DependentUpon>
@@ -751,6 +790,8 @@
     <None Include="lw2DataSet9.xss">
       <DependentUpon>lw2DataSet9.xsd</DependentUpon>
     </None>
+    <None Include="lw\Map\Cache\konfig.cfg" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
